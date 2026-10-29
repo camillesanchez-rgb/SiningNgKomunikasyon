@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mga Aralin sa Sining ng Komunikasyon — Filipino 1, BSIT 1G." />
+  <title>Panimula | Filipino 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#173F35',
+            leaf: '#2E6654',
+            cream: '#F7F2E8',
+            paper: '#FFFCF5',
+            gold: '#C6A45A',
+            ink: '#24312C'
+          },
+          fontFamily: {
+            display: ['Georgia', 'serif'],
+            body: ['Arial', 'Helvetica', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    body { font-family: Arial, Helvetica, sans-serif; }
+    .hero-pattern {
+      background-image: radial-gradient(circle at 15% 20%, rgba(198,164,90,.15) 0 2px, transparent 3px),
+                        radial-gradient(circle at 85% 70%, rgba(198,164,90,.13) 0 2px, transparent 3px);
+      background-size: 32px 32px, 38px 38px;
+    }
+    .lesson-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .lesson-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(23,63,53,.10); }
+    .section-rule { height: 3px; width: 4rem; background: #C6A45A; border-radius: 999px; }
+    @media print {
+      nav, .no-print, #mobile-menu-button { display: none !important; }
+      body { background: white; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="bg-cream text-ink">
+
+<nav class="sticky top-0 z-50 border-b border-forest/10 bg-paper/95 backdrop-blur">
+ <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+  <a href="panimula.html" class="flex items-center gap-3 font-bold text-forest"><span class="grid h-10 w-10 place-items-center rounded-xl bg-forest text-gold">W</span><span>Sining ng Komunikasyon<small class="block text-xs font-normal text-ink/60">Filipino 1 · BSIT 1G</small></span></a>
+  <button id="mobile-menu-button" class="rounded-lg border border-forest/20 px-3 py-2 text-sm font-semibold text-forest md:hidden" aria-expanded="false" aria-controls="nav-links">Menu ☰</button>
+  <div id="nav-links" class="absolute left-0 right-0 top-full hidden border-b border-forest/10 bg-paper p-4 md:static md:flex md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0">
+   <a class="nav-link block py-2 text-sm font-semibold hover:text-leaf" href="panimula.html">Panimula</a>
+   <a class="nav-link block py-2 text-sm font-semibold hover:text-leaf" href="prelim.html">Prelim</a>
+   <a class="nav-link block py-2 text-sm font-semibold hover:text-leaf" href="midterm.html">Midterm</a>
+   <a class="nav-link block py-2 text-sm font-semibold hover:text-leaf" href="semi-finals.html">Semi-Finals</a>
+   <a class="nav-link block py-2 text-sm font-semibold hover:text-leaf" href="finals.html">Finals</a>
+  </div>
+ </div>
+</nav>
+
+  <!-- Cover page -->
+  <header id="home" class="hero-pattern relative overflow-hidden bg-forest text-white">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.2fr_.8fr] md:items-center md:py-24">
+      <div>
+        <!-- <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/50 px-4 py-2 text-xs font-bold uppercase tracking-[.2em] text-gold">
+          Filipino 1 · Pangwakas na Pagsusulit
+        </p> -->
+        <h1 class="max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+          Mga Aralin sa <span class="text-gold">Sining ng Komunikasyon</span>
+        </h1>
+        <div class="my-7 section-rule"></div>
+        <p class="max-w-xl text-base leading-8 text-white/80 sm:text-lg">
+          Isang koleksiyon ng mga aralin tungkol sa wika, gramatika, at mabisang pakikipagkomunikasyon sa Filipino.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <!-- <a href="#prelim" class="rounded-xl bg-gold px-6 py-3 font-bold text-forest transition hover:bg-white">Tuklasin ang mga Aralin ↓</a> -->
+          <a href="#panimula" class="rounded-xl bg-gold px-6 py-3 font-bold text-forest transition hover:bg-white">Basahin ang Panimula</a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/15 bg-white/5 p-5 shadow-2xl backdrop-blur-sm sm:p-7">
+        <div class="rounded-2xl border border-gold/40 bg-paper p-6 text-forest sm:p-8">
+          <!-- <div class="mb-6 flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-[.2em] text-leaf">Pabalat ng Proyekto</span>
+            <span class="text-2xl text-gold">❧</span>
+          </div> -->
+          <h2 class="font-display text-2xl font-bold">Filipino 1</h2>
+          <p class="mt-1 text-sm text-ink/65">Taong Panuruan 2026</p>
+          <div class="my-5 border-t border-forest/15"></div>
+          <!-- <p class="text-sm font-bold uppercase tracking-wider text-leaf">Kurso at Seksyon</p> -->
+          <p class="mt-1 text-lg">Mr. Emmanuel Fiel Ando</p>
+        
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Group members -->
+  <section class="mx-auto max-w-7xl px-5 py-14 sm:px-8">
+    <div class="grid gap-8 md:grid-cols-[.7fr_1.3fr]">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[.2em] text-leaf">Mga Bumuo</p>
+        <h2 class="mt-3 font-display text-3xl font-bold text-forest">Mga Miyembro ng Pangkat</h2>
+        <div class="mt-5 section-rule"></div>
+        <p class="mt-5 max-w-sm leading-7 text-ink/70">Pinagsama-samang pagsisikap at pagkatuto ng mga mag-aaral sa BSIT 1G.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">01</span> Sanchez, Camille</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">02</span> Tuico, Kyle</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">03</span> Saranza, Angel Nicole</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">04</span> Travero, Murphy</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">05</span> Puza, Ernest Caesar</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">06</span> Pacaldo, Joshua</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">07</span> Milan, Clark Kent</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">08</span> Salingay, Bryce Raul</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">09</span> Premacio, Kathryn</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">10</span> Villagracia, Vincent Ryan</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">11</span> Urbiztondo, Clark</div>
+        <div class="rounded-xl border border-forest/10 bg-paper p-4"><span class="mr-3 text-gold">12</span> Robles, Reden Jhon</div>
+      </div>
+    </div>
+   
+  </section>
+
+  <!-- Introduction -->
+  <section id="panimula" class="bg-paper py-16">
+    <div class="mx-auto max-w-5xl px-5 sm:px-8">
+      <div class="text-center">
+        <p class="text-xs font-bold uppercase tracking-[.2em] text-leaf">Tungkol sa Website</p>
+        <h2 class="mt-3 font-display text-3xl font-bold text-forest sm:text-4xl">Panimula</h2>
+        <div class="mx-auto mt-5 section-rule"></div>
+      </div>
+      <p class="mt-8 text-justify text-base leading-8 text-ink/80">
+        Ang website na ito ay binuo upang tipunin at maipaliwanag ang mga araling tinalakay sa Filipino 1 mula Prelim hanggang Finals. Layunin nitong ipakita ang kahalagahan ng wikang Filipino bilang kasangkapan sa malinaw na pagpapahayag ng kaisipan, damdamin, kaalaman, at karanasan. Sa pamamagitan ng mga paliwanag, halimbawa, at biswal na materyales, mas madaling mauunawaan ang mga tuntunin sa wika at gramatika. Inaasahan ding makatulong ang proyektong ito sa pagpapaunlad ng pagbasa, pagsulat, pagsasalita, at pakikipag-ugnayan, gayundin sa pagpapahalaga sa sariling wika at kultura.
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl bg-cream p-5"><span class="text-2xl">📖</span><h3 class="mt-3 font-bold text-forest">Matuto</h3><p class="mt-2 text-sm leading-6 text-ink/70">Unawain ang mahahalagang konsepto ng wika.</p></div>
+        <div class="rounded-2xl bg-cream p-5"><span class="text-2xl">💬</span><h3 class="mt-3 font-bold text-forest">Makipag-ugnayan</h3><p class="mt-2 text-sm leading-6 text-ink/70">Linangin ang malinaw at angkop na komunikasyon.</p></div>
+        <div class="rounded-2xl bg-cream p-5"><span class="text-2xl">🌱</span><h3 class="mt-3 font-bold text-forest">Pahalagahan</h3><p class="mt-2 text-sm leading-6 text-ink/70">Kilalanin ang halaga ng Filipino at kultura.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+
+ <footer class="border-t border-[#E9E2D5] bg-paper">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-7 text-sm text-muted sm:flex-row">
+      <p>© 2026 Sining ng Komunikasyon</p>
+      <p>Filipino 1 · BSIT 1G · Prelim</p>
+    </div>
+  </footer>
+<script>
+const menuButton=document.getElementById('mobile-menu-button');
+const navLinks=document.getElementById('nav-links');
+menuButton.addEventListener('click',()=>{const isHidden=navLinks.classList.toggle('hidden');menuButton.setAttribute('aria-expanded',String(!isHidden));});
+document.querySelectorAll('.nav-link').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.add('hidden');menuButton.setAttribute('aria-expanded','false');}));
+</script>
+
+</body>
+</html>

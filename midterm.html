@@ -1,0 +1,1399 @@
+<!-- 
+ 
+
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Midterm | Sining ng Komunikasyon</title>
+
+  <!-- Tailwind CSS -->
+
+
+
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: "#173F35",
+            deepforest: "#10352D",
+            cream: "#F7F2E8",
+            paper: "#FFFCF6",
+            gold: "#C9A34B",
+            ink: "#263C36",
+            muted: "#64756D"
+          },
+          fontFamily: {
+            serif: ["Georgia", "serif"],
+            sans: ["Arial", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: #F7F2E8;
+      color: #263C36;
+    }
+
+    details > summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .arrow {
+      transform: rotate(180deg);
+    }
+
+    .lesson-text {
+      line-height: 1.9;
+    }
+
+    .section-title {
+      scroll-margin-top: 100px;
+    }
+
+    .timeline-line {
+      border-left: 2px solid #DCCB9E;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 border-b border-stone-200 bg-paper/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+
+      <a href="index.html" class="flex shrink-0 items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-forest font-serif text-xl font-bold text-gold">
+          W
+        </div>
+
+        <div>
+          <h1 class="font-bold text-forest">Sining ng Komunikasyon</h1>
+          <p class="text-xs text-muted">Filipino 1 · BSIT 1G</p>
+        </div>
+      </a>
+
+      <button id="menuButton"
+        class="rounded-lg border border-stone-300 px-3 py-2 text-sm font-semibold md:hidden"
+        aria-label="Buksan ang navigation"
+        aria-expanded="false">
+        ☰
+      </button>
+
+      <div id="navigation"
+        class="hidden flex-col gap-4 rounded-xl bg-paper p-4 text-sm font-semibold md:flex md:flex-row md:items-center md:bg-transparent md:p-0">
+
+        <a href="panimula.html" class="hover:text-gold">Panimula</a>
+        <a href="prelim.html" class="hover:text-gold">Prelim</a>
+        <a href="midterm.html" aria-current="page" class="text-gold">Midterm</a>
+        <a href="semi-finals.html" class="hover:text-gold">Semi-Finals</a>
+        <a href="finals.html" class="hover:text-gold">Finals</a>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="mx-auto max-w-6xl px-5 py-10 md:py-14">
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="mb-9 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
+      <div>
+        <p class="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-forest">
+          IKALAWANG BAHAGI
+        </p>
+
+        <h2 class="font-serif text-4xl font-bold text-forest md:text-5xl">
+          MIDTERM
+        </h2>
+
+        <p class="mt-3 max-w-xl text-sm leading-7 text-muted">
+          Pagkilala sa Filipino bilang wikang pambansa, kasaysayan
+          ng paglinang nito, mga tungkulin ng wika, at kahalagahan
+          nito sa edukasyon at komunikasyon.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+  <span class="rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white">
+    8 Paksa
+  </span>
+
+  <button
+    onclick="window.print()"
+    class="print:hidden rounded-full border border-forest px-5 py-2.5 text-sm font-bold text-forest transition hover:bg-forest hover:text-white">
+    🖨 I-print ang Aralin
+  </button>
+</div>
+
+    </section>
+
+
+    <!-- LESSON CARD -->
+    <section class="overflow-hidden rounded-3xl border border-stone-200 bg-paper shadow-sm">
+
+      <div class="grid md:grid-cols-[250px_minmax(0,1fr)] lg:grid-cols-[282px_minmax(0,1fr)]">
+
+        <!-- SIDEBAR -->
+        <aside class="flex flex-col justify-between bg-forest p-7 text-white md:p-8">
+
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              MIDTERM
+            </p>
+
+            <h3 class="mt-5 font-serif text-2xl font-bold leading-tight">
+              Filipino Bilang Wikang Pambansa
+            </h3>
+
+            <p class="mt-5 text-sm leading-7 text-white/75">
+              Unawain kung paano umunlad ang wikang pambansa,
+              mula sa mga unang hakbang ng pamahalaan hanggang
+              sa pagkilala sa Filipino sa Konstitusyon ng 1987.
+            </p>
+
+            <div class="my-8 h-px bg-white/20"></div>
+
+            <p class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">
+              NILALAMAN
+            </p>
+
+            <nav class="space-y-1.5 text-sm">
+
+              <a href="#panimula" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                01 · Wikang Pambansa
+              </a>
+
+              <a href="#depinisyon" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                02 · Depinisyon
+              </a>
+
+              <a href="#kasaysayan" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                03 · Kasaysayan
+              </a>
+
+              <a href="#tagalog" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                04 · Tagalog at Filipino
+              </a>
+
+              <a href="#tungkulin" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                05 · Tungkulin ng Wika
+              </a>
+
+              <a href="#edukasyon" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                06 · Edukasyon at Batas
+              </a>
+
+              <a href="#istatistika" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                07 · Mga Wika sa Pilipinas
+              </a>
+
+              <a href="#pagsasanay" class="block rounded-lg px-3 py-2 hover:bg-white/10">
+                08 · Pagsasanay
+              </a>
+
+            </nav>
+          </div>
+
+          <div class="mt-10 border-t border-white/20 pt-6">
+            <p class="font-serif text-3xl text-gold">“</p>
+
+            <p class="font-serif text-lg italic leading-relaxed">
+              Ang wikang pambansa ay tulay sa pagkakaunawaan
+              ng iba't ibang pangkat-etniko.
+            </p>
+
+            <p class="mt-3 text-xs text-white/60">
+              Filipino 1 · Aralin sa Wika
+            </p>
+          </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <article class="min-w-0 p-5 sm:p-8 lg:p-10">
+
+          <!-- 01: FILIPINO AS NATIONAL LANGUAGE -->
+          <section id="panimula" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+               PAKSA 
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest md:text-3xl">
+              Filipino Bilang Wikang Pambansa
+            </h3>
+
+            <h4 class="mb-3 mt-6 font-bold text-forest">
+              Paliwanag o Talakayan
+            </h4>
+
+            <p class="lesson-text text-sm text-slate-600">
+              Ang wikang pambansa ay ang wikang pinagtibay ng
+              pambansang pamahalaan at ginagamit sa pamahalaan
+              at pakikipag-ugnayan sa mga mamamayang sakop nito.
+            </p>
+
+            <p class="lesson-text mt-4 text-sm text-slate-600">
+              Kung ang isang bansa ay multilinggwal tulad ng Pilipinas,
+              ang wikang pambansa ay maaaring magsilbing tulay sa
+              pag-uugnayan ng iba't ibang pangkat-etniko na may
+              kani-kanilang katutubong wika.
+            </p>
+
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+
+              <div class="rounded-xl bg-cream p-5">
+                <span class="text-2xl">🇵🇭</span>
+                <h4 class="mt-3 font-bold text-forest">
+                  Pagkakaisa
+                </h4>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Nagbibigay ng paraan upang magkaunawaan ang
+                  mga mamamayang may iba't ibang katutubong wika.
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-cream p-5">
+                <span class="text-2xl">💬</span>
+                <h4 class="mt-3 font-bold text-forest">
+                  Komunikasyon
+                </h4>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  Nagagamit sa pakikipag-ugnayan, pagpapalitan
+                  ng ideya, at pagpapahayag ng impormasyon.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="mt-5 rounded-xl border-l-4 border-gold bg-cream p-5">
+              <h4 class="font-bold text-forest">Pangunahing ideya</h4>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Mahalaga ang wikang pambansa dahil nakatutulong
+                ito sa komunikasyon at pagkakaisa ng mga mamamayan
+                sa isang bansang may maraming wika.
+              </p>
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 02: DEFINITION -->
+          <section id="depinisyon" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 02
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Depinisyon ng Filipino
+            </h3>
+
+            <p class="lesson-text mt-4 text-sm text-slate-600">
+              Ang Filipino ay ang katutubong wika na ginagamit sa
+              buong Pilipinas bilang wika ng komunikasyon ng mga
+              etnikong grupo. Katulad ng iba pang wikang buhay,
+              patuloy itong dumaraan sa proseso ng paglinang.
+            </p>
+
+            <p class="lesson-text mt-4 text-sm text-slate-600">
+              Nalilinang ang Filipino sa pamamagitan ng panghihiram
+              sa mga wika ng Pilipinas at mga di-katutubong wika,
+              pati na rin sa pag-usbong ng iba't ibang varayti
+              para sa iba't ibang sitwasyon, antas ng lipunan,
+              at paksa ng talakayan at iskolarling pagpapahayag.
+            </p>
+
+            <h4 class="mb-3 mt-6 font-bold text-forest">
+              Paano umuunlad ang Filipino?
+            </h4>
+
+            <div class="space-y-3">
+
+              <div class="flex gap-4 rounded-xl bg-cream p-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-forest font-bold text-gold">1</span>
+                <div>
+                  <h5 class="font-bold text-forest">
+                    Panghihiram ng salita
+                  </h5>
+                  <p class="mt-1 text-sm leading-6 text-slate-600">
+                    Tumatanggap ang Filipino ng mga salita mula
+                    sa iba't ibang wika.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 rounded-xl bg-cream p-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-forest font-bold text-gold">2</span>
+                <div>
+                  <h5 class="font-bold text-forest">
+                    Pagbabago ng wika
+                  </h5>
+                  <p class="mt-1 text-sm leading-6 text-slate-600">
+                    Nagbabago ang paggamit ng wika ayon sa panahon
+                    at pangangailangan ng mga nagsasalita nito.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4 rounded-xl bg-cream p-4">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-forest font-bold text-gold">3</span>
+                <div>
+                  <h5 class="font-bold text-forest">
+                    Paglawak ng gamit
+                  </h5>
+                  <p class="mt-1 text-sm leading-6 text-slate-600">
+                    Ginagamit ang Filipino sa edukasyon, panitikan,
+                    agham, teknolohiya, at iba pang larangan.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 03: HISTORY -->
+          <section id="kasaysayan" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 03
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Kasaysayan ng Paglinang sa Wikang Pambansa
+            </h3>
+
+            <p class="lesson-text mt-3 text-sm text-slate-600">
+              Nagsimula ang pormal na mga hakbang sa paglinang
+              ng wikang pambansa sa ilalim ng mga probisyon ng
+              Konstitusyon ng 1935. 
+            </p>
+
+            <div class="timeline-line ml-3 mt-7 space-y-7 pl-6">
+
+              <!-- 1935 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  1935
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Konstitusyon ng 1935
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Artikulo XIV, Seksyon 3 ang nagtatadhana na
+                  magsasagawa ng mga hakbang ang Pambansang
+                  Asemblea tungo sa paglinang at pagpapatibay
+                  ng isang wikang pambansa na mababatay sa
+                  isa sa mga umiiral na katutubong wika.
+                </p>
+              </div>
+
+              <!-- 1936 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  1936
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Batas ng Komonwelt Blg. 184
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Itinatag ang Surian ng Wikang Pambansa upang
+                  magsagawa ng mga pag-aaral at magrekomenda
+                  ng batayan para sa wikang pambansa.
+                </p>
+              </div>
+
+              <!-- 1937 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Disyembre 30, 1937
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Kautusang Tagapagpaganap Blg. 134
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Nilagdaan ni Pangulong Manuel L. Quezon ang
+                  kautusang nagtatakda sa Tagalog bilang batayan
+                  ng wikang pambansa, alinsunod sa rekomendasyon
+                  ng Surian ng Wikang Pambansa.
+                </p>
+              </div>
+
+              <!-- 1940 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Abril 1, 1940
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Kautusang Tagapagpaganap Blg. 263
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Nagbigay ng pahintulot sa pag-iimprenta ng
+                  diksyunaryo at balarila ng wikang pambansa.
+                  Itinakda rin ang pagtuturo nito sa mga paaralan.
+                </p>
+              </div>
+
+              <!-- 1940 TEACHING -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Hunyo 19, 1940
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Pagtuturo sa mga paaralan
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Nagsimula ang pagtuturo
+                  ng wikang pambansa sa mga pampubliko at
+                  pribadong paaralan sa petsang ito.
+                </p>
+              </div>
+
+              <!-- 1959 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Agosto 13, 1959
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Memorandum Pangkagawaran Blg. 7
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Iniatas ni Kalihim Jose E. Romero ng Edukasyon
+                  at Kultura ang paggamit ng katawagang
+                  “Pilipino” sa pagtukoy sa wikang pambansa.
+                </p>
+              </div>
+
+              <!-- 1987 -->
+              <div class="relative">
+                <span class="absolute -left-[33px] top-1 flex h-4 w-4 rounded-full border-4 border-cream bg-gold"></span>
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  1987
+                </span>
+
+                <h4 class="mt-1 font-bold text-forest">
+                  Konstitusyon ng 1987
+                </h4>
+
+                <p class="lesson-text mt-2 text-sm text-slate-600">
+                  Itinatadhana ng Artikulo XIV, Seksyon 6 na
+                  ang wikang pambansa ng Pilipinas ay Filipino.
+                  Dapat itong payabungin at pagyamanin batay sa
+                  mga umiiral na wika sa Pilipinas at iba pang wika.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="mt-7 rounded-xl border-l-4 border-gold bg-cream p-5">
+              <h4 class="font-bold text-forest">
+                Tandaan ang mga petsa
+              </h4>
+
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                1935 — Konstitusyon · 1936 — Batas Komonwelt Blg. 184 ·
+                1937 — Tagalog bilang batayan · 1940 — pagtuturo sa
+                paaralan · 1959 — katawagang Pilipino ·
+                1987 — Filipino bilang wikang pambansa.
+              </p>
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 04: TAGALOG, PILIPINO, FILIPINO -->
+          <section id="tagalog" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 04
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Tagalog, Pilipino, at Filipino
+            </h3>
+
+            <p class="lesson-text mt-3 text-sm text-slate-600">
+              Magkakaugnay ang tatlong katawagan, ngunit magkaiba
+              ang kanilang papel sa kasaysayan at paglinang ng
+              wikang pambansa.
+            </p>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-3">
+
+              <div class="rounded-xl border border-stone-200 bg-white p-5">
+                <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cream text-xl">
+                  📖
+                </div>
+
+                <h4 class="font-serif text-xl font-bold text-forest">
+                  Tagalog
+                </h4>
+
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Isang katutubong wika sa Pilipinas na naging
+                  batayan ng wikang pambansa noong 1937.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-stone-200 bg-white p-5">
+                <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-cream text-xl">
+                  📝
+                </div>
+
+                <h4 class="font-serif text-xl font-bold text-forest">
+                  Pilipino
+                </h4>
+
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Katawagang ginamit para sa wikang pambansa
+                  sa ilalim ng Memorandum Pangkagawaran Blg. 7
+                  noong 1959.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-gold/50 bg-cream p-5">
+                <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-forest text-xl text-white">
+                  🇵🇭
+                </div>
+
+                <h4 class="font-serif text-xl font-bold text-forest">
+                  Filipino
+                </h4>
+
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Ang wikang pambansa na itinakda ng Konstitusyon
+                  ng 1987 at patuloy na nililinang at pinayayaman.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="mt-5 rounded-xl bg-forest p-5 text-white">
+              <h4 class="font-bold text-gold">Mahalagang pagkakaiba</h4>
+
+              <p class="mt-3 text-sm leading-7 text-white/85">
+                Ang Tagalog ang naging batayan ng wikang pambansa.
+                Ang Pilipino ang katawagang ginamit noong 1959.
+                Sa ilalim ng Konstitusyon ng 1987, Filipino ang
+                wikang pambansa at patuloy itong nililinang batay
+                sa mga umiiral na wika sa Pilipinas at iba pang wika.
+              </p>
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 05: FUNCTIONS OF LANGUAGE -->
+          <section id="tungkulin" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 05
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Frame ng Tungkulin / Tungkulin ng Wika
+            </h3>
+
+            <p class="lesson-text mt-3 text-sm text-slate-600">
+              May iba't ibang tungkulin ang wika depende sa
+              layunin ng nagsasalita o sumusulat.
+            </p>
+
+            <div class="mt-5 space-y-3">
+
+              <!-- INTERACTIONAL -->
+              <details open class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">🤝</span>
+                    <div>
+                      <h4 class="font-bold text-forest">1. Pang-interaksyunal</h4>
+                      <p class="text-xs text-muted">Pagpapanatili ng relasyong sosyal</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang bumuo at mapanatili
+                    ang ugnayan sa ibang tao.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Kumusta ka? Tara, sabay tayong kumain.”
+                  </div>
+                </div>
+              </details>
+
+              <!-- INSTRUMENTAL -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">🎯</span>
+                    <div>
+                      <h4 class="font-bold text-forest">2. Pang-instrumental</h4>
+                      <p class="text-xs text-muted">Pagtugon sa mga pangangailangan</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang makuha ang isang
+                    bagay o matugunan ang isang pangangailangan.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Maaari po bang makahingi ng isang basong tubig?”
+                  </div>
+                </div>
+              </details>
+
+              <!-- REGULATORY -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">📋</span>
+                    <div>
+                      <h4 class="font-bold text-forest">3. Panregulatori</h4>
+                      <p class="text-xs text-muted">Pagkontrol o paggabay sa kilos at asal</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang magbigay ng utos,
+                    panuto, paalala, o tuntunin.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Mangyaring pumila nang maayos at panatilihing malinis ang silid.”
+                  </div>
+                </div>
+              </details>
+
+              <!-- PERSONAL -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">❤️</span>
+                    <div>
+                      <h4 class="font-bold text-forest">4. Pampersonal</h4>
+                      <p class="text-xs text-muted">Pagpapahayag ng damdamin at opinyon</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang ipahayag ang sariling
+                    damdamin, saloobin, paniniwala, at opinyon.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Masaya ako dahil natapos ko ang aking proyekto.”
+                  </div>
+                </div>
+              </details>
+
+              <!-- IMAGINATIVE -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">🎨</span>
+                    <div>
+                      <h4 class="font-bold text-forest">5. Pang-imahinasyon</h4>
+                      <p class="text-xs text-muted">Malikhaing pagpapahayag ng imahinasyon</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang lumikha ng mga kuwento,
+                    tula, kathang-isip, at iba pang malikhaing akda.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Sa isang kaharian sa ulap, may isang ibong
+                    kayang magbigay ng mga bituin.”
+                  </div>
+                </div>
+              </details>
+
+              <!-- HEURISTIC -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">🔎</span>
+                    <div>
+                      <h4 class="font-bold text-forest">6. Pangheuristiko</h4>
+                      <p class="text-xs text-muted">Paghahanap ng impormasyon o datos</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang magtanong, magsiyasat,
+                    at tumuklas ng bagong kaalaman.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Bakit mahalagang pangalagaan ang wikang pambansa?”
+                  </div>
+                </div>
+              </details>
+
+              <!-- INFORMATIVE -->
+              <details class="rounded-xl border border-stone-200 bg-white">
+                <summary class="flex items-center justify-between gap-4 p-5">
+                  <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cream text-xl">📢</span>
+                    <div>
+                      <h4 class="font-bold text-forest">7. Pang-impormatib</h4>
+                      <p class="text-xs text-muted">Pagbibigay ng impormasyon o datos</p>
+                    </div>
+                  </div>
+                  <span class="arrow transition-transform">⌄</span>
+                </summary>
+
+                <div class="border-t border-stone-100 px-5 pb-5 pt-4">
+                  <p class="text-sm leading-7 text-slate-600">
+                    Ginagamit ang wika upang magbigay ng mga
+                    impormasyon, paliwanag, ulat, at kaalaman.
+                  </p>
+
+                  <div class="mt-3 rounded-lg bg-cream p-4 text-sm leading-6">
+                    <strong class="text-forest">Halimbawa:</strong>
+                    “Ang wikang pambansa ng Pilipinas ay Filipino.”
+                  </div>
+                </div>
+              </details>
+
+            </div>
+
+            <div class="mt-5 rounded-xl border-l-4 border-gold bg-cream p-5">
+              <h4 class="font-bold text-forest">Tip sa pag-aaral</h4>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Tandaan ang layunin ng bawat tungkulin. Ang
+                pang-interaksyunal ay para sa ugnayan; ang
+                pang-instrumental ay para sa pangangailangan;
+                ang panregulatori ay para sa paggabay; ang
+                pampersonal ay para sa damdamin; ang
+                pang-imahinasyon ay para sa paglikha; ang
+                pangheuristiko ay para sa pagtatanong; at ang
+                pang-impormatib ay para sa pagbibigay ng impormasyon.
+              </p>
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 06: EDUCATION AND OFFICIAL LANGUAGE -->
+          <section id="edukasyon" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 06
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Pagtuturo at Opisyal na Paggamit ng Wikang Pambansa
+            </h3>
+
+            <div class="mt-5 space-y-4">
+
+              <div class="rounded-xl border border-stone-200 bg-white p-5">
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Kautusang Tagapagpaganap Blg. 263
+                </span>
+
+                <h4 class="mt-2 font-bold text-forest">
+                  Abril 1, 1940
+                </h4>
+
+                <p class="lesson-text mt-3 text-sm text-slate-600">
+                  Sa bisa ng kautusang ito, pinahintulutan ang
+                  pag-iimprenta ng diksyunaryo at balarila ng
+                  wikang pambansa at itinakda ang pagtuturo nito
+                  sa mga paaralan.
+                </p>
+
+              </div>
+
+              <div class="rounded-xl border border-stone-200 bg-white p-5">
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Pagtuturo sa mga paaralan
+                </span>
+
+                <h4 class="mt-2 font-bold text-forest">
+                  Hunyo 19, 1940
+                </h4>
+
+                <p class="lesson-text mt-3 text-sm text-slate-600">
+                  Nagsimula ang pagtuturo
+                  ng wikang pambansa sa mga pampubliko at
+                  pribadong paaralan sa petsang ito.
+                </p>
+
+              </div>
+
+              <div class="rounded-xl border border-stone-200 bg-white p-5">
+
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">
+                  Batas ng Komonwelt Blg. 570
+                </span>
+
+                <h4 class="mt-2 font-bold text-forest">
+                  Hulyo 7, 1940
+                </h4>
+
+                <p class="lesson-text mt-3 text-sm text-slate-600">
+                  Itinatakda ng batas ang pagkilala sa wikang
+                  pambansa bilang isa sa mga wikang opisyal,
+                  na magkakabisa sa Hulyo 4, 1946.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="mt-5 rounded-xl bg-forest p-5 text-white">
+              <p class="text-xs font-bold uppercase tracking-widest text-gold">
+                Konstitusyon ng 1987 · Artikulo XIV · Seksyon 6
+              </p>
+
+              <p class="mt-3 font-serif text-lg leading-relaxed">
+                “Ang wikang pambansa ng Pilipinas ay Filipino.
+                Samantalang nalilinang, ito ay dapat payabungin
+                at pagyamanin pa salig sa umiiral na mga wika
+                ng Pilipinas at sa iba pang mga wika.”
+              </p>
+
+              <p class="mt-4 text-sm leading-7 text-white/75">
+                Itinataguyod din ng Konstitusyon ang paggamit ng
+                Filipino bilang midyum ng opisyal na komunikasyon
+                at bilang wika ng pagtuturo sa sistemang pang-edukasyon,
+                alinsunod sa mga tadhana ng batas.
+              </p>
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 07: LANGUAGES AND STATISTICS -->
+          <section id="istatistika" class="section-title mb-10">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 07
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Mga Wika at Lingua Franca sa Pilipinas
+            </h3>
+
+            <p class="lesson-text mt-3 text-sm text-slate-600">
+              Maraming katutubong wika ang ginagamit sa Pilipinas.
+              May mga wikang nagsisilbing lingua franca, o wikang
+              ginagamit upang magkaunawaan ang mga taong may
+              magkaibang katutubong wika.
+            </p>
+
+            <h4 class="mb-3 mt-6 font-bold text-forest">
+              Apat na pinakamalaganap na wikain 
+            </h4>
+
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+
+              <div class="rounded-xl bg-cream p-4 text-center">
+                <span class="text-2xl">🗣️</span>
+                <h5 class="mt-2 font-bold text-forest">Sebuwano</h5>
+                <p class="mt-1 text-xs text-muted">Cebuano</p>
+              </div>
+
+              <div class="rounded-xl bg-cream p-4 text-center">
+                <span class="text-2xl">📖</span>
+                <h5 class="mt-2 font-bold text-forest">Tagalog</h5>
+                <p class="mt-1 text-xs text-muted">Luzon at iba pang lugar</p>
+              </div>
+
+              <div class="rounded-xl bg-cream p-4 text-center">
+                <span class="text-2xl">🌿</span>
+                <h5 class="mt-2 font-bold text-forest">Hiligaynon</h5>
+                <p class="mt-1 text-xs text-muted">Kanlurang Visayas</p>
+              </div>
+
+              <div class="rounded-xl bg-cream p-4 text-center">
+                <span class="text-2xl">🌾</span>
+                <h5 class="mt-2 font-bold text-forest">Ilokano</h5>
+                <p class="mt-1 text-xs text-muted">Hilagang Luzon</p>
+              </div>
+
+            </div>
+
+            <h4 class="mb-3 mt-7 font-bold text-forest">
+              Mga halimbawa ng lingua franca 
+            </h4>
+
+            <div class="space-y-3">
+
+              <div class="flex items-start gap-4 rounded-xl border border-stone-200 bg-white p-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream">📍</span>
+                <div>
+                  <h5 class="font-bold text-forest">Hilagang Luzon</h5>
+                  <p class="mt-1 text-sm text-slate-600">Ilokano</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-stone-200 bg-white p-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream">📍</span>
+                <div>
+                  <h5 class="font-bold text-forest">Timog Luzon</h5>
+                  <p class="mt-1 text-sm text-slate-600">Tagalog</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 rounded-xl border border-stone-200 bg-white p-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream">📍</span>
+                <div>
+                  <h5 class="font-bold text-forest">Bisaya at Mindanao</h5>
+                  <p class="mt-1 text-sm text-slate-600">Sebuwano</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- POPULATION STATISTICS -->
+            <div class="mt-8">
+
+              <h4 class="font-bold text-forest">
+                Porsiyento ng populasyong nakauunawa at gumagamit ng Filipino
+              </h4>
+
+              
+
+              <div class="mt-5 space-y-5">
+
+                <div>
+                  <div class="mb-2 flex justify-between gap-3 text-sm">
+                    <span class="font-semibold text-forest">Nakauunawa</span>
+                    <span class="font-bold text-forest">92%</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-stone-200">
+                    <div class="h-full rounded-full bg-forest" style="width:92%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-2 flex justify-between gap-3 text-sm">
+                    <span class="font-semibold text-forest">Nakababasa</span>
+                    <span class="font-bold text-forest">88%</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-stone-200">
+                    <div class="h-full rounded-full bg-forest" style="width:88%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-2 flex justify-between gap-3 text-sm">
+                    <span class="font-semibold text-forest">Nakapagsasalita</span>
+                    <span class="font-bold text-forest">83%</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-stone-200">
+                    <div class="h-full rounded-full bg-forest" style="width:83%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-2 flex justify-between gap-3 text-sm">
+                    <span class="font-semibold text-forest">Nakasusulat</span>
+                    <span class="font-bold text-forest">82%</span>
+                  </div>
+                  <div class="h-3 overflow-hidden rounded-full bg-stone-200">
+                    <div class="h-full rounded-full bg-forest" style="width:82%"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              
+
+            </div>
+
+          </section>
+
+
+          <div class="my-9 border-t border-stone-200"></div>
+
+
+          <!-- 08: ACTIVITY / QUIZ -->
+          <section id="pagsasanay" class="section-title">
+
+            <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">
+              PAKSA 08
+            </p>
+
+            <h3 class="font-serif text-2xl font-bold text-forest">
+              Aktibidad: Subukan ang Iyong Kaalaman
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Sagutin ang limang tanong tungkol sa kasaysayan ng
+              wikang pambansa, kahulugan ng Filipino, at mga tungkulin
+              ng wika.
+            </p>
+
+            <form id="quizForm" class="mt-6 space-y-5">
+
+              <!-- QUESTION 1 -->
+              <fieldset class="rounded-xl border border-stone-200 p-5">
+                <legend class="px-2 font-bold text-forest">
+                  1. Ano ang wikang pambansa ng Pilipinas ayon sa Konstitusyon ng 1987?
+                </legend>
+
+                <label class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q1" value="a" class="accent-forest">
+                  <span class="text-sm">Tagalog</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q1" value="b" class="accent-forest">
+                  <span class="text-sm">Filipino</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q1" value="c" class="accent-forest">
+                  <span class="text-sm">Ingles lamang</span>
+                </label>
+              </fieldset>
+
+              <!-- QUESTION 2 -->
+              <fieldset class="rounded-xl border border-stone-200 p-5">
+                <legend class="px-2 font-bold text-forest">
+                  2. Sino ang pangulong lumagda sa Kautusang Tagapagpaganap Blg. 134 noong 1937?
+                </legend>
+
+                <label class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q2" value="a" class="accent-forest">
+                  <span class="text-sm">Manuel L. Quezon</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q2" value="b" class="accent-forest">
+                  <span class="text-sm">Jose E. Romero</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q2" value="c" class="accent-forest">
+                  <span class="text-sm">Andres Bonifacio</span>
+                </label>
+              </fieldset>
+
+              <!-- QUESTION 3 -->
+              <fieldset class="rounded-xl border border-stone-200 p-5">
+                <legend class="px-2 font-bold text-forest">
+                  3. Anong katawagan ang iniatas gamitin para sa wikang pambansa noong 1959?
+                </legend>
+
+                <label class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q3" value="a" class="accent-forest">
+                  <span class="text-sm">Sebuwano</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q3" value="b" class="accent-forest">
+                  <span class="text-sm">Pilipino</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q3" value="c" class="accent-forest">
+                  <span class="text-sm">Hiligaynon</span>
+                </label>
+              </fieldset>
+
+              <!-- QUESTION 4 -->
+              <fieldset class="rounded-xl border border-stone-200 p-5">
+                <legend class="px-2 font-bold text-forest">
+                  4. Anong tungkulin ng wika ang ginagamit upang
+                  magtanong at maghanap ng impormasyon?
+                </legend>
+
+                <label class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q4" value="a" class="accent-forest">
+                  <span class="text-sm">Pampersonal</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q4" value="b" class="accent-forest">
+                  <span class="text-sm">Pangheuristiko</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q4" value="c" class="accent-forest">
+                  <span class="text-sm">Pang-imahinasyon</span>
+                </label>
+              </fieldset>
+
+              <!-- QUESTION 5 -->
+              <fieldset class="rounded-xl border border-stone-200 p-5">
+                <legend class="px-2 font-bold text-forest">
+                  5. Ano ang ibig sabihin ng lingua franca?
+                </legend>
+
+                <label class="mt-3 flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q5" value="a" class="accent-forest">
+                  <span class="text-sm">Wikang ginagamit lamang sa tahanan</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q5" value="b" class="accent-forest">
+                  <span class="text-sm">Wikang ginagamit upang magkaunawaan ang mga taong may magkaibang katutubong wika</span>
+                </label>
+
+                <label class="flex cursor-pointer items-center gap-3 rounded-lg p-3 hover:bg-cream">
+                  <input type="radio" name="q5" value="c" class="accent-forest">
+                  <span class="text-sm">Wikang ginagamit lamang sa panitikan</span>
+                </label>
+              </fieldset>
+
+              <button type="submit"
+                class="w-full rounded-xl bg-forest px-6 py-4 font-bold text-white transition hover:bg-deepforest">
+                Suriin ang mga sagot
+              </button>
+
+              <div id="quizResult"
+                class="hidden rounded-xl bg-cream p-5"
+                role="status"
+                aria-live="polite">
+              </div>
+
+            </form>
+
+          </section>
+
+        </article>
+      </div>
+    </section>
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <section class="mt-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+
+      <a href="prelim.html"
+        class="rounded-xl border border-stone-300 bg-paper px-5 py-3 text-center text-sm font-semibold text-forest hover:bg-white">
+        ← Bumalik sa Prelim
+      </a>
+
+      <a href="semi-finals.html"
+        class="rounded-xl bg-forest px-5 py-3 text-center text-sm font-semibold text-white hover:bg-deepforest">
+        Susunod: Semi-Finals →
+      </a>
+
+    </section>
+
+
+  
+
+  </main>
+
+  <footer class="border-t border-[#E9E2D5] bg-paper">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-7 text-sm text-muted sm:flex-row">
+      <p>© 2026 Sining ng Komunikasyon</p>
+      <p>Filipino 1 · BSIT 1G · Prelim</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Mobile navigation
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("navigation");
+
+    menuButton.addEventListener("click", function () {
+      const isHidden = navigation.classList.toggle("hidden");
+
+      menuButton.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+
+    // Midterm review quiz
+    const quizForm = document.getElementById("quizForm");
+    const quizResult = document.getElementById("quizResult");
+
+    const correctAnswers = {
+      q1: "b",
+      q2: "a",
+      q3: "b",
+      q4: "b",
+      q5: "b"
+    };
+
+    quizForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      let score = 0;
+      let unanswered = 0;
+
+      for (const question in correctAnswers) {
+        const selected = quizForm.querySelector(
+          `input[name="${question}"]:checked`
+        );
+
+        if (!selected) {
+          unanswered++;
+        } else if (selected.value === correctAnswers[question]) {
+          score++;
+        }
+      }
+
+      quizResult.classList.remove("hidden");
+
+      if (unanswered > 0) {
+        quizResult.innerHTML = `
+          <p class="font-bold text-forest">
+            Sagutin muna ang lahat ng tanong.
+          </p>
+
+          <p class="mt-2 text-sm leading-6 text-slate-600">
+            May ${unanswered} pang tanong na hindi nasasagutan.
+            Balikan ang mga tanong bago isumite ang iyong sagot.
+          </p>
+        `;
+
+        return;
+      }
+
+      let message = "";
+
+      if (score === 5) {
+        message = "Mahusay! Naunawaan mo ang mahahalagang konsepto sa Midterm.";
+      } else if (score >= 3) {
+        message = "Maganda ang iyong pagsisikap! Balikan ang mga paksang kailangan pang pag-aralan.";
+      } else {
+        message = "Balikan ang iyong lesson notes at subukan muli ang pagsusulit.";
+      }
+
+      quizResult.innerHTML = `
+        <p class="text-xs font-bold uppercase tracking-widest text-gold">
+          RESULTA NG PAGSASANAY
+        </p>
+
+        <p class="mt-2 font-serif text-3xl font-bold text-forest">
+          ${score} / 5
+        </p>
+
+        <p class="mt-2 text-sm leading-6 text-slate-600">
+          ${message}
+        </p>
+
+        <button type="button" id="retryQuiz"
+          class="mt-4 rounded-lg bg-forest px-4 py-2 text-sm font-semibold text-white">
+          Subukan muli
+        </button>
+      `;
+
+      document.getElementById("retryQuiz").addEventListener("click", function () {
+        quizForm.reset();
+        quizResult.classList.add("hidden");
+
+        quizForm.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+
+      quizResult.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    });
+
+  </script>
+
+</body>
+</html>

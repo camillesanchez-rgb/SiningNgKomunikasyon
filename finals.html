@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finals | Sining ng Komunikasyon</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Theme configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: "#17483b",
+              dark: "#123c31",
+              light: "#315e50"
+            },
+            cream: "#f7f2e8",
+            gold: "#d8a34e",
+            paper: "#fffdf8"
+          },
+          fontFamily: {
+            editorial: ["Georgia", "Times New Roman", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .lesson-section {
+      scroll-margin-top: 100px;
+    }
+
+    .sidebar-link {
+      display: block;
+      padding: 8px 20px;
+      color: #234b5a;
+      font-size: 12px;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: background .2s, padding-left .2s;
+    }
+
+    .sidebar-link:hover {
+      background: #f7f2e8;
+      padding-left: 25px;
+      color: #17483b;
+    }
+
+    .example-box {
+      background: #faf6ee;
+      border: 1px solid #eee4d4;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 18px 0;
+    }
+
+    .definition-card {
+      background: #fffdf8;
+      border: 1px solid #e8dfd0;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .lesson-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .lesson-table th,
+    .lesson-table td {
+      padding: 12px 15px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #e8dfd0;
+    }
+
+    .lesson-table thead {
+      background: #17483b;
+      color: white;
+    }
+
+    .lesson-table tbody tr:nth-child(even) {
+      background: #faf6ee;
+    }
+
+    .lesson-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid #e8dfd0;
+      border-radius: 10px;
+      margin: 18px 0 24px;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 15mm;
+      }
+
+      body {
+        background: white !important;
+        color: #222 !important;
+        font-size: 10.5pt;
+        line-height: 1.6;
+      }
+
+      .no-print,
+      nav,
+      aside,
+      .print-button {
+        display: none !important;
+      }
+
+      .page-container {
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .page-intro {
+        display: block !important;
+        margin-bottom: 18px !important;
+      }
+
+      .featured-card {
+        background: white !important;
+        color: #17483b !important;
+        border: 1px solid #17483b !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+
+      .featured-card p {
+        color: #333 !important;
+      }
+
+      .lesson-layout {
+        display: block !important;
+      }
+
+      .lesson-card {
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+      }
+
+      .lesson-section h2,
+      .lesson-section h3,
+      .lesson-section h4 {
+        color: #17483b !important;
+      }
+
+      .example-box,
+      .definition-card,
+      .activity-card,
+      blockquote {
+        break-inside: avoid;
+      }
+
+      .table-wrap {
+        overflow: visible !important;
+        break-inside: auto;
+      }
+
+      .lesson-table {
+        font-size: 9pt;
+      }
+
+      .lesson-table thead {
+        display: table-header-group;
+      }
+
+      .lesson-table tr {
+        break-inside: avoid;
+      }
+
+      .lesson-table th,
+      .lesson-table td {
+        border: 1px solid #ccc;
+        color: #222 !important;
+      }
+
+      .lesson-table thead th {
+        color: white !important;
+        background: #17483b !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-[#24453f] text-sm leading-[1.9]">
+
+  <!-- TOP NAVIGATION -->
+  <header class="no-print sticky top-0 z-50 border-t-2 border-[#a76d67] border-b border-[#e8dfd0] bg-paper/95 backdrop-blur">
+    <div class="mx-auto flex min-h-[68px] max-w-[1170px] items-center justify-between gap-7 px-6 py-3">
+
+      <a href="index.html" class="flex shrink-0 items-center gap-3 text-forest-dark no-underline">
+        <div class="grid h-[38px] w-[38px] place-items-center rounded-xl bg-forest-dark font-editorial text-[21px] font-bold text-gold">
+          W
+        </div>
+
+        <div>
+          <div class="text-sm font-bold leading-5">
+            Sining ng Komunikasyon
+          </div>
+          <div class="text-[11px] leading-5 text-[#71817c]">
+            Filipino 1 · BSIT 1G
+          </div>
+        </div>
+      </a>
+
+      <nav class="flex items-center gap-5 overflow-x-auto whitespace-nowrap text-xs font-bold">
+        <a href="panimula.html" class="text-forest-dark hover:text-gold">Panimula</a>
+        <a href="prelim.html" class="text-forest-dark hover:text-gold">Prelim</a>
+        <a href="midterm.html" class="text-forest-dark hover:text-gold">Midterm</a>
+        <a href="semi-finals.html" class="text-forest-dark hover:text-gold">Semi-Finals</a>
+        <a href="finals.html" aria-current="page" class="border-b-2 border-gold pb-2 text-forest">Finals</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="page-container mx-auto max-w-[1170px] px-6 pb-16 pt-11">
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-intro mb-8 flex items-end justify-between gap-7 max-md:flex-col max-md:items-start">
+
+      <div class="max-w-[680px]">
+        <p class="mb-1 text-[11px] font-bold tracking-[3px] text-[#0c4c57]">
+          HULING BAHAGI · MGA ARALIN
+        </p>
+
+        <h1 class="font-editorial text-5xl font-bold leading-tight tracking-[-2px] text-forest-dark max-sm:text-4xl">
+          FINALS
+        </h1>
+
+        <p class="mt-2 max-w-[650px] text-sm leading-7 text-[#70818c]">
+          Koleksiyon ng mga aralin sa Filipino 1 tungkol sa pangungusap,
+          kayarian nito, ayos ng simuno at panaguri, at wastong pagbuo
+          ng mga pahayag.
+        </p>
+      </div>
+
+      <div class="intro-actions flex flex-wrap items-center gap-2">
+        <span class="inline-flex min-h-10 items-center rounded-full bg-forest px-5 text-xs font-bold text-white">
+          1 Aralin
+        </span>
+
+        <button
+          type="button"
+          onclick="window.print()"
+          class="print-button min-h-10 rounded-full border border-forest px-5 text-xs font-bold text-forest-dark transition hover:bg-forest hover:text-white"
+        >
+          I-print ang Aralin
+        </button>
+      </div>
+
+    </section>
+
+    <!-- FEATURED BANNER -->
+    <section class="featured-card mb-[26px] flex min-h-[170px] items-center justify-between gap-6 rounded-[15px] bg-forest px-[30px] py-7 text-white max-sm:px-5">
+
+      <div class="max-w-[760px]">
+        <p class="mb-1 text-[11px] font-bold tracking-[2px] text-gold">
+          PAKSA 
+        </p>
+
+        <h2 class="font-editorial text-[30px] font-bold leading-tight max-sm:text-[23px]">
+          Aralin sa Filipino: Pangungusap
+        </h2>
+
+        <p class="mt-3 max-w-[660px] text-[13px] leading-6 text-[#f0f5f0]">
+          Unawain ang kahulugan ng pangungusap, ang apat na uri nito ayon
+          sa kayarian, at ang pagkakaiba ng karaniwang ayos at
+          di-karaniwang ayos.
+        </p>
+      </div>
+
+      <div class="no-print grid h-[76px] w-[76px] shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 text-4xl max-sm:hidden" aria-hidden="true">
+        📚
+      </div>
+
+    </section>
+
+    <!-- SIDEBAR AND CONTENT -->
+    <div class="lesson-layout grid grid-cols-[230px_minmax(0,1fr)] items-start gap-[26px] max-[850px]:grid-cols-1">
+
+      <!-- CONTENTS SIDEBAR -->
+      <aside class="no-print sticky top-[90px] overflow-hidden rounded-[15px] border border-[#e8dfd0] bg-paper py-3 max-[850px]:static">
+
+        <p class="px-5 pb-3 text-[11px] font-bold tracking-[2px] text-[#71858a]">
+          NILALAMAN
+        </p>
+
+        <a href="#kahulugan" class="sidebar-link">01 · Ano ang Pangungusap?</a>
+        <a href="#payak" class="sidebar-link">02 · Payak na Pangungusap</a>
+        <a href="#tambalan" class="sidebar-link">03 · Tambalang Pangungusap</a>
+        <a href="#hugnayan" class="sidebar-link">04 · Hugnayang Pangungusap</a>
+        <a href="#langkapan" class="sidebar-link">05 · Langkapan na Pangungusap</a>
+        <a href="#ayos" class="sidebar-link">06 · Karaniwang Ayos</a>
+        <a href="#di-karaniwang" class="sidebar-link">07 · Di-Karaniwang Ayos</a>
+        <a href="#paghahambing" class="sidebar-link">08 · Paghahambing</a>
+        <a href="#tandaan" class="sidebar-link">09 · Madaling Tandaan</a>
+        <a href="#pagsasanay" class="sidebar-link">10 · Pagsasanay</a>
+
+      </aside>
+
+      <!-- MAIN ARTICLE -->
+      <article class="lesson-card min-w-0 rounded-[20px] border border-[#e8dfd0] bg-paper p-[32px] max-sm:rounded-[15px] max-sm:p-[19px]">
+
+        <!-- SECTION I -->
+        <section id="kahulugan" class="lesson-section mb-8">
+
+          <p class="mb-1 text-[11px] font-bold tracking-[2.5px] text-gold">
+            PAKSA 
+          </p>
+
+          <h2 class="mb-6 border-l-4 border-gold pl-3 font-editorial text-[30px] font-bold leading-tight text-forest max-sm:text-[25px]">
+            I. Ano ang Pangungusap?
+          </h2>
+
+          <blockquote class="mb-6 rounded-r-xl border-l-4 border-gold bg-cream px-5 py-4 font-editorial text-[17px] italic leading-8 text-forest">
+            Ang pangungusap ay lipon ng mga salita na nagpapahayag ng
+            buong diwa o kaisipan.
+          </blockquote>
+
+          <p class="mb-4">
+            Karaniwang binubuo ito ng dalawang bahagi:
+          </p>
+
+          <div class="my-5 grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+
+            <div class="rounded-xl border border-[#e8dfd0] bg-[#f8f3e9] p-5">
+              <h3 class="mb-2 font-editorial text-xl font-bold text-forest">
+                Simuno
+              </h3>
+              <p>Ang pinag-uusapan sa pangungusap.</p>
+            </div>
+
+            <div class="rounded-xl border border-[#e8dfd0] bg-[#f8f3e9] p-5">
+              <h3 class="mb-2 font-editorial text-xl font-bold text-forest">
+                Panaguri
+              </h3>
+              <p>Ang nagsasabi tungkol sa simuno.</p>
+            </div>
+
+          </div>
+
+          <div class="example-box">
+            <h4 class="mb-2 font-bold text-forest">Halimbawa</h4>
+
+            <p class="mb-3 font-editorial text-lg italic text-forest">
+              "Si Ana ay nag-aaral."
+            </p>
+
+            <p><strong>Simuno:</strong> Si Ana</p>
+            <p><strong>Panaguri:</strong> ay nag-aaral</p>
+          </div>
+
+        </section>
+
+        <hr class="my-8 border-[#e8dfd0]">
+
+        <!-- SECTION II -->
+        <section id="kayarian" class="lesson-section mb-8">
+
+          <h2 class="mb-5 border-l-4 border-gold pl-3 font-editorial text-[28px] font-bold leading-tight text-forest max-sm:text-2xl">
+            II. Mga Uri ng Pangungusap Ayon sa Kayarian
+          </h2>
+
+          <p class="mb-4">
+            May apat na uri ng pangungusap ayon sa kayarian:
+          </p>
+
+          <div class="mb-6 grid grid-cols-2 gap-3 max-sm:grid-cols-1">
+
+            <a href="#payak" class="rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4 font-bold text-forest no-underline transition hover:border-gold">
+              <span class="mr-2 text-gold">01</span> Payak
+            </a>
+
+            <a href="#tambalan" class="rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4 font-bold text-forest no-underline transition hover:border-gold">
+              <span class="mr-2 text-gold">02</span> Tambalan
+            </a>
+
+            <a href="#hugnayan" class="rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4 font-bold text-forest no-underline transition hover:border-gold">
+              <span class="mr-2 text-gold">03</span> Hugnayan
+            </a>
+
+            <a href="#langkapan" class="rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4 font-bold text-forest no-underline transition hover:border-gold">
+              <span class="mr-2 text-gold">04</span> Langkapan
+            </a>
+
+          </div>
+
+          <!-- PAYAK -->
+          <div id="payak" class="mb-7 scroll-mt-24">
+            <h3 class="mb-3 font-editorial text-2xl font-bold text-forest">
+              1. Payak na Pangungusap
+            </h3>
+
+            <p class="mb-4">
+              Ang payak na pangungusap ay may isang buong diwa at
+              naglalaman ng isang sugnay na makapag-iisa.
+            </p>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Mga Halimbawa</h4>
+
+              <ul class="list-disc space-y-2 pl-5">
+                <li>Nagluluto si Nanay.</li>
+                <li>Masipag mag-aral si Pedro.</li>
+                <li>Ang mga bata ay naglalaro sa parke.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-r-xl border-l-4 border-gold bg-cream p-5">
+              <p class="font-bold text-forest">Tandaan</p>
+              <p class="mt-2">
+                Kahit maraming salita ang pangungusap, maaari pa rin itong
+                maging payak basta iisa ang sugnay na makapag-iisa.
+              </p>
+
+              <p class="mt-3 font-editorial italic text-forest">
+                "Ang masipag at mabait na estudyante ay nag-aaral nang mabuti."
+              </p>
+
+              <p class="mt-2">
+                Payak pa rin ito dahil iisa ang buong diwa.
+              </p>
+            </div>
+          </div>
+
+          <!-- TAMBALAN -->
+          <div id="tambalan" class="mb-7 scroll-mt-24">
+            <h3 class="mb-3 font-editorial text-2xl font-bold text-forest">
+              2. Tambalang Pangungusap
+            </h3>
+
+            <p class="mb-4">
+              Ang tambalang pangungusap ay binubuo ng dalawa o higit pang
+              sugnay na makapag-iisa.
+            </p>
+
+            <p class="mb-3">
+              Karaniwang pinag-uugnay ito ng mga pangatnig tulad ng:
+            </p>
+
+            <div class="mb-5 flex flex-wrap gap-2">
+              <span class="rounded-full bg-forest px-4 py-1 text-xs font-bold text-white">at</span>
+              <span class="rounded-full bg-forest px-4 py-1 text-xs font-bold text-white">ngunit</span>
+              <span class="rounded-full bg-forest px-4 py-1 text-xs font-bold text-white">subalit</span>
+              <span class="rounded-full bg-forest px-4 py-1 text-xs font-bold text-white">datapwat</span>
+              <span class="rounded-full bg-forest px-4 py-1 text-xs font-bold text-white">o</span>
+            </div>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Halimbawa</h4>
+
+              <p class="mb-4 font-editorial text-lg italic text-forest">
+                "Nag-aaral si Ana at naglalaro si Pedro."
+              </p>
+
+              <div class="space-y-2">
+                <p><strong>Sugnay 1:</strong> Nag-aaral si Ana.</p>
+                <p><strong>Sugnay 2:</strong> Naglalaro si Pedro.</p>
+              </div>
+
+              <p class="mt-4">
+                Parehong may buong diwa ang dalawang sugnay.
+              </p>
+            </div>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Iba pang halimbawa</h4>
+
+              <ul class="list-disc space-y-2 pl-5">
+                <li>Gusto kong kumain ngunit wala akong pera.</li>
+                <li>Naglinis si Nanay at nagluto si Ate.</li>
+                <li>Maaari kang mag-aral o maaari kang magpahinga.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HUGNAYAN -->
+          <div id="hugnayan" class="mb-7 scroll-mt-24">
+            <h3 class="mb-3 font-editorial text-2xl font-bold text-forest">
+              3. Hugnayang Pangungusap
+            </h3>
+
+            <p class="mb-4">
+              Ang hugnayang pangungusap ay binubuo ng isang sugnay na
+              makapag-iisa at isa o higit pang sugnay na di-makapag-iisa.
+            </p>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Halimbawa</h4>
+
+              <p class="mb-4 font-editorial text-lg italic text-forest">
+                "Dahil umuulan, hindi kami pumasok sa paaralan."
+              </p>
+
+              <p class="mb-2">
+                <strong>Sugnay na di-makapag-iisa:</strong> Dahil umuulan.
+              </p>
+
+              <p>
+                <strong>Sugnay na makapag-iisa:</strong>
+                hindi kami pumasok sa paaralan.
+              </p>
+            </div>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Iba pang halimbawa</h4>
+
+              <ul class="list-disc space-y-2 pl-5">
+                <li>Nag-aral si Ana kapag may pagsusulit.</li>
+                <li>Uuwi kami kapag natapos ang klase.</li>
+                <li>Hindi ako pumasok dahil may sakit ako.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- LANGKAPAN -->
+          <div id="langkapan" class="mb-7 scroll-mt-24">
+            <h3 class="mb-3 font-editorial text-2xl font-bold text-forest">
+              4. Langkapan na Pangungusap
+            </h3>
+
+            <p class="mb-4">
+              Ang langkapan na pangungusap ay binubuo ng dalawa o higit
+              pang sugnay na makapag-iisa at isa o higit pang sugnay
+              na di-makapag-iisa.
+            </p>
+
+            <div class="example-box">
+              <h4 class="mb-3 font-bold text-forest">Halimbawa</h4>
+
+              <p class="mb-4 font-editorial text-lg italic text-forest">
+                "Nag-aral si Ana dahil may pagsusulit, at nagbasa naman
+                ng libro si Pedro."
+              </p>
+
+              <div class="space-y-3">
+                <div class="rounded-lg bg-white p-3">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wide text-forest">
+                    Sugnay na makapag-iisa 1
+                  </p>
+                  <p>Nag-aral si Ana.</p>
+                </div>
+
+                <div class="rounded-lg bg-white p-3">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wide text-[#a5792f]">
+                    Sugnay na di-makapag-iisa
+                  </p>
+                  <p>dahil may pagsusulit.</p>
+                </div>
+
+                <div class="rounded-lg bg-white p-3">
+                  <p class="mb-1 text-xs font-bold uppercase tracking-wide text-forest">
+                    Sugnay na makapag-iisa 2
+                  </p>
+                  <p>nagbasa naman ng libro si Pedro.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <hr class="my-8 border-[#e8dfd0]">
+
+        <!-- SECTION III -->
+        <section id="ayos" class="lesson-section mb-8">
+
+          <h2 class="mb-5 border-l-4 border-gold pl-3 font-editorial text-[28px] font-bold leading-tight text-forest max-sm:text-2xl">
+            III. Karaniwang Ayos at Di-Karaniwang Ayos
+          </h2>
+
+          <p class="mb-5">
+            Ang dalawang ito ay tumutukoy sa ayos ng simuno at panaguri
+            sa pangungusap.
+          </p>
+
+          <div class="mb-7 rounded-xl border border-[#e8dfd0] bg-[#f8f3e9] p-5">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[2px] text-gold">
+              01 · Karaniwang Ayos
+            </p>
+
+            <h3 class="mb-2 font-editorial text-xl font-bold text-forest">
+              Panaguri muna bago Simuno
+            </h3>
+
+            <p class="mb-4">
+              Sa karaniwang ayos, nauuna ang panaguri bago ang simuno.
+            </p>
+
+            <div class="mb-4 rounded-lg bg-white p-4 text-center">
+              <p class="font-bold text-forest">
+                Panaguri + Simuno
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Masipag mag-aral si Ana."
+                </p>
+                <p><strong>Panaguri:</strong> Masipag mag-aral</p>
+                <p><strong>Simuno:</strong> si Ana</p>
+              </div>
+
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Maganda ang bulaklak."
+                </p>
+                <p><strong>Panaguri:</strong> Maganda</p>
+                <p><strong>Simuno:</strong> ang bulaklak</p>
+              </div>
+
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Masarap ang pagkain."
+                </p>
+                <p><strong>Panaguri:</strong> Masarap</p>
+                <p><strong>Simuno:</strong> ang pagkain</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="di-karaniwang" class="scroll-mt-24 rounded-xl border border-[#e8dfd0] bg-[#f8f3e9] p-5">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[2px] text-gold">
+              02 · Di-Karaniwang Ayos
+            </p>
+
+            <h3 class="mb-2 font-editorial text-xl font-bold text-forest">
+              Simuno muna bago Panaguri
+            </h3>
+
+            <p class="mb-4">
+              Sa di-karaniwang ayos, nauuna ang simuno bago ang panaguri.
+              Karaniwang ginagamit ang salitang "ay".
+            </p>
+
+            <div class="mb-4 rounded-lg bg-white p-4 text-center">
+              <p class="font-bold text-forest">
+                Simuno + ay + Panaguri
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Si Ana ay masipag mag-aral."
+                </p>
+                <p><strong>Simuno:</strong> Si Ana</p>
+                <p><strong>Panaguri:</strong> masipag mag-aral</p>
+              </div>
+
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Ang bulaklak ay maganda."
+                </p>
+                <p><strong>Simuno:</strong> Ang bulaklak</p>
+                <p><strong>Panaguri:</strong> maganda</p>
+              </div>
+
+              <div>
+                <p class="mb-1 font-editorial text-lg italic text-forest">
+                  "Ang pagkain ay masarap."
+                </p>
+                <p><strong>Simuno:</strong> Ang pagkain</p>
+                <p><strong>Panaguri:</strong> masarap</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <hr class="my-8 border-[#e8dfd0]">
+
+        <!-- SECTION IV -->
+        <section id="paghahambing" class="lesson-section mb-8">
+
+          <h2 class="mb-5 border-l-4 border-gold pl-3 font-editorial text-[28px] font-bold leading-tight text-forest max-sm:text-2xl">
+            IV. Paghahambing
+          </h2>
+
+          <p class="mb-4">
+            Gamitin ang talahanayan upang mabilis na makita ang pagkakaiba
+            ng mga uri ng pangungusap ayon sa kayarian at ayos.
+          </p>
+
+          <div class="table-wrap">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Uri</th>
+                  <th>Kahulugan</th>
+                  <th>Halimbawa</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="font-bold text-forest">Payak</td>
+                  <td>Isang sugnay na makapag-iisa.</td>
+                  <td>Nag-aaral si Ana.</td>
+                </tr>
+
+                <tr>
+                  <td class="font-bold text-forest">Tambalan</td>
+                  <td>Dalawa o higit pang sugnay na makapag-iisa.</td>
+                  <td>Nag-aaral si Ana at naglalaro si Pedro.</td>
+                </tr>
+
+                <tr>
+                  <td class="font-bold text-forest">Hugnayan</td>
+                  <td>May makapag-iisa at di-makapag-iisang sugnay.</td>
+                  <td>Nag-aaral si Ana dahil may pagsusulit.</td>
+                </tr>
+
+                <tr>
+                  <td class="font-bold text-forest">Langkapan</td>
+                  <td>May dalawa o higit pang sugnay na makapag-iisa at isa o higit pang di-makapag-iisa.</td>
+                  <td>Nag-aaral si Ana dahil may pagsusulit, at nagbabasa si Pedro.</td>
+                </tr>
+
+                <tr>
+                  <td class="font-bold text-forest">Karaniwang ayos</td>
+                  <td>Panaguri muna bago simuno.</td>
+                  <td>Masipag si Ana.</td>
+                </tr>
+
+                <tr>
+                  <td class="font-bold text-forest">Di-karaniwang ayos</td>
+                  <td>Simuno muna bago panaguri.</td>
+                  <td>Si Ana ay masipag.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </section>
+
+        <hr class="my-8 border-[#e8dfd0]">
+
+        <!-- SECTION V -->
+        <section id="tandaan" class="lesson-section mb-8">
+
+          <h2 class="mb-5 border-l-4 border-gold pl-3 font-editorial text-[28px] font-bold leading-tight text-forest max-sm:text-2xl">
+            V. Madaling Tandaan
+          </h2>
+
+          <div class="space-y-3">
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">1</span>
+              <p><strong>Payak</strong> = isang buong diwa.</p>
+            </div>
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">2</span>
+              <p><strong>Tambalan</strong> = dalawa o higit pang buong diwa.</p>
+            </div>
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">3</span>
+              <p><strong>Hugnayan</strong> = may buong diwa at di-buong diwa.</p>
+            </div>
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">4</span>
+              <p><strong>Langkapan</strong> = dalawa o higit pang buong diwa kasama ang di-buong diwa.</p>
+            </div>
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">5</span>
+              <p><strong>Karaniwang ayos</strong> = Panaguri + Simuno.</p>
+            </div>
+
+            <div class="flex gap-4 rounded-xl border border-[#e8dfd0] bg-[#faf6ee] p-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest font-bold text-white">6</span>
+              <p><strong>Di-karaniwang ayos</strong> = Simuno + ay + Panaguri.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <hr class="my-8 border-[#e8dfd0]">
+
+        <!-- SECTION VI -->
+        <section id="pagsasanay" class="lesson-section mb-8">
+
+          <p class="mb-1 text-[11px] font-bold tracking-[2.5px] text-gold">
+            SUBUKIN ANG KAALAMAN
+          </p>
+
+          <h2 class="mb-5 border-l-4 border-gold pl-3 font-editorial text-[28px] font-bold leading-tight text-forest max-sm:text-2xl">
+            VI. Pagsasanay
+          </h2>
+
+          <p class="mb-5">
+            Basahin ang bawat pangungusap at sagutin ang mga tanong.
+            Isulat ang iyong mga sagot sa kuwaderno.
+          </p>
+
+          <div class="activity-card rounded-xl border border-[#e5d4b4] bg-[#faf4e7] p-6 max-sm:p-4">
+
+            <h3 class="mb-4 font-editorial text-xl font-bold text-forest">
+              A. Tukuyin ang Kayarian
+            </h3>
+
+            <p class="mb-4">
+              Isulat kung ang pangungusap ay Payak, Tambalan, Hugnayan,
+              o Langkapan.
+            </p>
+
+            <ol class="list-decimal space-y-4 pl-5">
+              <li>
+                Nagluluto si Nanay.
+                <div class="mt-2 h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+
+              <li>
+                Nag-aral si Ana dahil may pagsusulit.
+                <div class="mt-2 h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+
+              <li>
+                Nagbabasa si Pedro at nagsusulat si Maria.
+                <div class="mt-2 h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+
+              <li>
+                Nag-aral si Ana dahil may pagsusulit, at nagbasa si Pedro.
+                <div class="mt-2 h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+
+              <li>
+                Ang masipag at mabait na estudyante ay nag-aaral nang mabuti.
+                <div class="mt-2 h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+            </ol>
+
+            <!-- <hr class="my-7 border-[#e5d4b4]"> -->
+
+            <!-- <h3 class="mb-4 font-editorial text-xl font-bold text-forest">
+              B. Tukuyin ang Simuno at Panaguri
+            </h3>
+
+            <ol class="list-decimal space-y-5 pl-5">
+              <li>
+                Si Ana ay masipag mag-aral.
+                <p class="mt-2 text-xs text-[#71817c]">Simuno:</p>
+                <div class="h-7 border-b border-dashed border-[#c8b99f]"></div>
+                <p class="mt-2 text-xs text-[#71817c]">Panaguri:</p>
+                <div class="h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+
+              <li>
+                Maganda ang bulaklak.
+                <p class="mt-2 text-xs text-[#71817c]">Simuno:</p>
+                <div class="h-7 border-b border-dashed border-[#c8b99f]"></div>
+                <p class="mt-2 text-xs text-[#71817c]">Panaguri:</p>
+                <div class="h-7 border-b border-dashed border-[#c8b99f]"></div>
+              </li>
+            </ol>
+
+            <hr class="my-7 border-[#e5d4b4]">
+
+            <h3 class="mb-4 font-editorial text-xl font-bold text-forest">
+              C. Gumawa ng Sariling Pangungusap
+            </h3>
+
+            <ol class="list-decimal space-y-4 pl-5">
+              <li>Sumulat ng isang payak na pangungusap.</li>
+              <li>Sumulat ng isang tambalang pangungusap.</li>
+              <li>Sumulat ng isang hugnayang pangungusap.</li>
+              <li>Sumulat ng isang langkapan na pangungusap.</li>
+              <li>Sumulat ng isang pangungusap sa di-karaniwang ayos.</li>
+            </ol>
+
+            <p class="mt-6 border-t border-[#e5d4b4] pt-4 text-xs text-[#71817c]">
+              Paalala: Suriin ang iyong sagot at tiyaking tama ang
+              kayarian at ayos ng bawat pangungusap.
+            </p> -->
+
+          </div>
+        </section>
+          
+<!-- PREVIOUS / NEXT PAGE NAVIGATION -->
+<div class="mt-10 flex items-center justify-between gap-4 border-t border-[#e8dfd0] pt-6">
+
+  <!-- Back to Semi-Finals -->
+  <a
+    href="semi-finals.html"
+    class="inline-flex items-center rounded-xl border border-[#d8d0c5] bg-[#fffdf8] px-5 py-3 text-sm font-bold text-[#17483b] transition hover:bg-[#f0e8da]"
+  >
+    ← Bumalik sa Semi-Finals
+  </a>
+
+  <!-- Next page (optional) -->
+  <a
+    href="panimula.html"
+    class="inline-flex items-center rounded-xl bg-[#17483b] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#123c31]"
+  >
+    Bumalik sa Panimula →
+  </a>
+
+</div>
+
+          </button>
+        
+
+      </article>
+
+      
+    </div>
+
+    
+  </main>
+<footer class="border-t border-[#E9E2D5] bg-paper">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-7 text-sm text-muted sm:flex-row">
+      <p>© 2026 Sining ng Komunikasyon</p>
+      <p>Filipino 1 · BSIT 1G · Prelim</p>
+    </div>
+  </footer>
+</body>
+</html>
+
